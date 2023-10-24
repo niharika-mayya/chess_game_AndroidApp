@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gameselectionbg"
+    tools:context=".home_page">
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="185dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="596dp"
+        android:src="@drawable/chessicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+
+
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="239dp"
+        android:background="#81B8F0A4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:src="@drawable/settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <ImageView
+        android:id="@+id/exit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:src="@drawable/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.757" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:id="@+id/newgame"
+        android:backgroundTint="#48FFFFFF"
+        android:text="NEW GAME"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#48FFFFFF"
+        android:text="TUTORIAL"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        android:id="@+id/tutorial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

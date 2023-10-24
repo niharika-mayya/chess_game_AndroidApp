@@ -1,0 +1,1762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout3"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/game_screen"
+        android:layout_width="422dp"
+        android:layout_height="748dp"
+        android:background="@color/black"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/chessboard"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="0dp"
+        android:background="@color/black"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="185dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="596dp"
+        android:src="@drawable/chessicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chessicon"
+        tools:srcCompat="@drawable/chessicon" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/timer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.218">
+        <View
+            android:id="@+id/rectangularBox"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="#685D5D" />
+
+        <ImageView
+            android:id="@+id/exitImageView"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:contentDescription="Exit"
+            android:src="@drawable/exit2" />
+
+        <ImageView
+            android:id="@+id/pauseImageView"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:contentDescription="Pause"
+            android:src="@drawable/pause" />
+
+
+        <ImageView
+            android:id="@+id/restartImageView"
+            android:layout_width="52dp"
+            android:layout_height="36dp"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:contentDescription="Restart"
+            android:src="@drawable/retry" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/timer1"
+        android:layout_width="95dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="525dp"
+        android:text="00:15"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/clock1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="176dp"
+        android:src="@drawable/clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toEndOf="@+id/timer1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer2"
+        android:layout_width="95dp"
+        android:layout_height="26dp"
+        android:text="00:15"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toEndOf="@+id/clock2"
+        app:layout_constraintTop_toBottomOf="@+id/c1"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <ImageView
+        android:id="@+id/clock2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="56dp"
+        android:src="@drawable/clock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.753" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="103dp"
+        android:layout_height="27dp"
+        android:text="WHITE"
+        android:textColor="#FFFFFF"
+        android:background="@color/green"
+        android:textSize="15dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/b8"
+        app:layout_constraintEnd_toStartOf="@+id/timer1"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.893" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="103dp"
+        android:layout_height="27dp"
+        android:text="BLACK"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/g1"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <Button
+        android:id="@+id/a8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b00"
+        android:foregroundTint="@android:color/transparent"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b01"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/c8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b02"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/d8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b03"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/e8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b04"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/f8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b05"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/g8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="224.9dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b06"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/h8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b07"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/a7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="37.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b10"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="37.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b11"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/c7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="37.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b12"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/d7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="37.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b13"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/e7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="37.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b14"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/f7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="37.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b15"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/g7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="224.9dp"
+        android:layout_marginTop="37.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b16"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/h7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="37.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b17"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <!-- 3rd row -->
+
+    <Button
+        android:id="@+id/a6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/c6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b22"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/d6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/e6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/f6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/g6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="224.9dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/h6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="75dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/a5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="112.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b10"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="112.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b11"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/c5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="112.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b12"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/d5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="112.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b13"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/e5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="112.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b14"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/f5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="112.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b15"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/g5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="224.9dp"
+        android:layout_marginTop="112.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b16"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/h5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262dp"
+        android:layout_marginTop="112.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b17"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/a4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/c4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b22"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/d4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/e4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/f4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/g4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="224.9dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/h4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/a3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="187.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b10"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="187.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b11"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/c3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="187.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b12"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/d3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="187.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b13"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/e3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="187.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b14"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/f3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="187.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b15"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/g3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="224.9dp"
+        android:layout_marginTop="187.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b16"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/h3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="187.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b17"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/a2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="225dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="225dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/c2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="225dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b22"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/d2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="225dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/e2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="225dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/f2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="225dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/g2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="224.9dp"
+        android:layout_marginTop="225dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b21"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/h2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="225dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b20"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/a1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="262.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b10"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="262.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b11"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/c1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="262.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b12"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/d1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="262.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b13"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/e1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="262.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b14"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+
+    <Button
+        android:id="@+id/f1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="262.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b15"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/g1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="224.9dp"
+        android:layout_marginTop="262.5dp"
+        android:backgroundTint="#55A239"
+        android:contentDescription="@string/b16"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/h1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="262.5dp"
+        android:backgroundTint="#B8F0A4"
+        android:contentDescription="@string/b17"
+        android:foregroundTint="#00880F0F"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="0dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="@id/chessboard"
+        app:layout_constraintTop_toTopOf="@id/chessboard"
+        app:rippleColor="#00FFFFFF" />
+
+    <ImageView
+        android:id="@+id/rook_black1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="262.5dp"
+        android:contentDescription="@string/rook_black1"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/rook_black" />
+
+    <ImageView
+        android:id="@+id/knight_black1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="262.5dp"
+        android:contentDescription="@string/knight_black1"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/knight_black" />
+
+    <ImageView
+        android:id="@+id/bishop_black1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="262.5dp"
+        android:contentDescription="@string/bishop_black1"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/bishop_black" />
+
+    <ImageView
+        android:id="@+id/queen_black"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="262.5dp"
+        android:contentDescription="@string/queen_black"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/queen_black" />
+
+    <ImageView
+        android:id="@+id/king_black"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="262.5dp"
+        android:contentDescription="@string/king_black"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/king_black" />
+
+    <ImageView
+        android:id="@+id/bishop_black2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="262.5dp"
+        android:contentDescription="@string/bishop_black2"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/bishop_black" />
+
+    <ImageView
+        android:id="@+id/knight_black2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="262.5dp"
+        android:contentDescription="@string/knight_black2"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/knight_black" />
+
+    <ImageView
+        android:id="@+id/rook_black2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="262.5dp"
+        android:contentDescription="@string/rook_black2"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/rook_black" />
+
+    <ImageView
+        android:id="@+id/pawn_black1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginTop="225dp"
+        android:contentDescription="@string/pawn_black1"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_black" />
+
+    <ImageView
+        android:id="@+id/pawn_black2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="225dp"
+        android:contentDescription="@string/pawn_black2"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_black" />
+
+    <ImageView
+        android:id="@+id/pawn_black3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="225dp"
+        android:contentDescription="@string/pawn_black3"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_black" />
+
+    <ImageView
+        android:id="@+id/pawn_black4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="225dp"
+        android:contentDescription="@string/pawn_black4"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_black" />
+
+    <ImageView
+        android:id="@+id/pawn_black5"
+        android:layout_width="33dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="228dp"
+        android:contentDescription="@string/pawn_black5"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_black" />
+
+    <ImageView
+        android:id="@+id/pawn_black6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="225dp"
+        android:contentDescription="@string/pawn_black6"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_black" />
+
+    <ImageView
+        android:id="@+id/pawn_black7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="225dp"
+        android:contentDescription="@string/pawn_black7"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_black" />
+
+    <ImageView
+        android:id="@+id/pawn_black8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="225dp"
+        android:contentDescription="@string/pawn_black8"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_black" />
+
+
+    <ImageView
+        android:id="@+id/rook_white1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/rook_white1"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/rook_white" />
+
+    <ImageView
+        android:id="@+id/knight_white1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/knight_white1"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/knight_white" />
+
+    <ImageView
+        android:id="@+id/bishop_white1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/bishop_white1"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/bishop_white" />
+
+    <ImageView
+        android:id="@+id/queen_white"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/queen_white"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/queen_white" />
+
+    <ImageView
+        android:id="@+id/king_white"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/king_white"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/king_white" />
+
+    <ImageView
+        android:id="@+id/bishop_white2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/bishop_white2"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/bishop_white" />
+
+    <ImageView
+        android:id="@+id/knight_white2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/knight_white2"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/knight_white" />
+
+    <ImageView
+        android:id="@+id/rook_white2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@string/rook_white2"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/rook_white" />
+
+    <ImageView
+        android:id="@+id/pawn_white1"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="37.5dp"
+        android:contentDescription="@string/pawn_white1"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_white" />
+
+    <ImageView
+        android:id="@+id/pawn_white2"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="37.5dp"
+        android:layout_marginTop="37.5dp"
+        android:contentDescription="@string/pawn_white2"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_white" />
+
+    <ImageView
+        android:id="@+id/pawn_white3"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="37.5dp"
+        android:contentDescription="@string/pawn_white3"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_white" />
+
+    <ImageView
+        android:id="@+id/pawn_white4"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="112.5dp"
+        android:layout_marginTop="37.5dp"
+        android:contentDescription="@string/pawn_white4"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_white" />
+
+    <ImageView
+        android:id="@+id/pawn_white5"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="37.5dp"
+        android:contentDescription="@string/pawn_white5"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_white" />
+
+    <ImageView
+        android:id="@+id/pawn_white6"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="187.5dp"
+        android:layout_marginTop="37.5dp"
+        android:contentDescription="@string/pawn_white6"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_white" />
+
+    <ImageView
+        android:id="@+id/pawn_white7"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="37.5dp"
+        android:contentDescription="@string/pawn_white7"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_white" />
+
+    <ImageView
+        android:id="@+id/pawn_white8"
+        android:layout_width="37.5dp"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="262.5dp"
+        android:layout_marginTop="37.5dp"
+        android:contentDescription="@string/pawn_white8"
+        app:layout_constraintStart_toStartOf="@+id/chessboard"
+        app:layout_constraintTop_toTopOf="@+id/chessboard"
+        app:srcCompat="@drawable/pawn_white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="360dp"
+        android:layout_height="150dp"
+        android:backgroundTint="@color/gray"
+        app:cardCornerRadius="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer2"
+        app:layout_constraintVertical_bias="0.148">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WHITE"
+                android:textColor="@color/white"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="15sp"
+                android:background="@color/green"/>
+
+            <TextView
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginRight="10sp"
+                android:fontFamily="@font/font"
+                android:text="@string/cardText5"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="30sp"
+                    app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/baseline_arrow_forward_24" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
