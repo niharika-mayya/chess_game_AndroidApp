@@ -29,7 +29,8 @@
             android:exported="false" />
         <activity
             android:name=".settings"
-            android:exported="false" />
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".register"
             android:exported="false" />
@@ -58,9 +59,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".load_page"
-            android:exported="false" />
-        <activity
             android:name=".activity_message2"
             android:exported="false" />
         <activity
@@ -69,11 +67,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

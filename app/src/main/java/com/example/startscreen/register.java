@@ -74,7 +74,12 @@ String uname="";
             public void onFocusChange(View view, boolean hasFocus) {
                 if (!hasFocus)
                 {
-                    if(isPasswordMatching( password.getText().toString(),cpassword.getText().toString()))
+                    if(isPasswordValid(cpassword.getText().toString()))
+                    {
+                        error.setText("Fields cannot be empty!");
+                        register.setClickable(false);
+                    }
+                    if(isPasswordMatching( password.getText().toString(),cpassword.getText().toString())  )
                     {
                         error.setText("");
                         register.setClickable(true);
@@ -93,17 +98,25 @@ String uname="";
                 DataBaseHandler db=new DataBaseHandler(register.this);
                 SQLiteDatabase writableDB = db.getWritableDatabase();
                 String user_name=db.getUsername(username.getText().toString());
-                if(user_name.isEmpty()) {
-                    UserInfo ui = new UserInfo(username.getText().toString(), password.getText().toString());
-                    db.addUser(ui);
-                    Toast.makeText(register.this, "Registered Succesfully!", Toast.LENGTH_SHORT).show();
-                    Intent i=new Intent(register.this, login.class);
-                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(register.this);
-                    startActivity(i, options.toBundle());
-                }
-                else
+                if(!isUsernameValid(username.getText().toString()) || !isPasswordValid( password.getText().toString()) || !isPasswordValid(cpassword.getText().toString())  )
                 {
-                    error.setText("User already exists!");
+                    error.setText("Fields cannot be empty!");
+                }
+                else if(!isPasswordMatching(password.getText().toString(),cpassword.getText().toString()))
+                {
+                    error.setText("Password Mismatch!");
+                }
+                else{
+                    if (user_name.isEmpty()) {
+                        UserInfo ui = new UserInfo(username.getText().toString(), password.getText().toString());
+                        db.addUser(ui);
+                        Toast.makeText(register.this, "Registered Succesfully!", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(register.this, login.class);
+                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(register.this);
+                        startActivity(i, options.toBundle());
+                    } else {
+                        error.setText("User already exists!");
+                    }
                 }
             }
         });

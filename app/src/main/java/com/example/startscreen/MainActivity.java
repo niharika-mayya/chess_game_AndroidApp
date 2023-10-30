@@ -144,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainTimer.cancel();
                 if (isWhiteTurn) {
                     whiteTimer.cancel();
                     isWhiteTimerRunning = false;

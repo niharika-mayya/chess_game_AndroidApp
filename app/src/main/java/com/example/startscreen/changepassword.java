@@ -70,22 +70,28 @@ public class changepassword extends AppCompatActivity {
                 SQLiteDatabase writableDB = db.getWritableDatabase();
                     SharedPreferences sharedPref = getSharedPreferences("username", Context.MODE_PRIVATE);
                     String username = sharedPref.getString("username", "");
-                    if(username.isEmpty())
-                    {
+                if(!isPasswordValid(currentpassword.getText().toString())||!isPasswordValid(newpassword.getText().toString()))
+                {
+                    error.setText("Fields cannot be empty");
+
+                }
+                else {
+
+                    if (username.isEmpty()) {
                         error.setText("Username not registered or Incorrect Password!");
-                    }
-                    else {
+                    } else {
                         db.updatePswd(username, newpassword.getText().toString());
                         Toast.makeText(changepassword.this, "Password Updated Succesfully", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(com.example.startscreen.changepassword.this, login_register_page.class);
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(changepassword.this);
                         startActivity(i, options.toBundle());
                     }
+                }
 
             }
         });
     }
-    public boolean isPasswordValid(String username) {
-        return !TextUtils.isEmpty(username);
+    public boolean isPasswordValid(String password) {
+        return !TextUtils.isEmpty(password) && password.length() >= 6;
     }
 }

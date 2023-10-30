@@ -71,25 +71,28 @@ public class login extends AppCompatActivity {
                 SQLiteDatabase writableDB = db.getReadableDatabase();
                 String uname=db.getUsername(username.getText().toString());
 
-                if(uname.isEmpty())
+                if(!isUsernameValid(username.getText().toString()) || !isPasswordValid(password.getText().toString()))
                 {
-                    error.setText("Username not registered!");
+                    error.setText("Fields cannot be empty!");
                 }
                 else {
-                    String pswd=db.getPassword(uname);
-                    if(password.getText().toString().equals(pswd))
-                    {
-                        SharedPreferences sharedPref = getSharedPreferences("username", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPref.edit();
-                        editor.putString("username", uname);
-                        editor.apply();
-                        Intent i = new Intent(com.example.startscreen.login.this, home_page.class);
-                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(login.this);
-                        startActivity(i, options.toBundle());
-                    }
-                    else
-                    {
-                        error.setText("Invalid Password!");
+
+
+                    if (uname.isEmpty()) {
+                        error.setText("Username not registered!");
+                    } else {
+                        String pswd = db.getPassword(uname);
+                        if (password.getText().toString().equals(pswd)) {
+                            SharedPreferences sharedPref = getSharedPreferences("username", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putString("username", uname);
+                            editor.apply();
+                            Intent i = new Intent(com.example.startscreen.login.this, home_page.class);
+                            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(login.this);
+                            startActivity(i, options.toBundle());
+                        } else {
+                            error.setText("Invalid Password!");
+                        }
                     }
                 }
             }

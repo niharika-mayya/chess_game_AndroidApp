@@ -5,21 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".gallery">
+    <!-- grid_item.xml -->
+    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+         android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:src="@null" />
 
     <GridView
         android:id="@+id/gridview"
-        android:layout_width="313dp"
+        android:layout_width="350dp"
         android:layout_height="581dp"
         android:layout_marginStart="49dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="49dp"
         android:layout_marginBottom="75dp"
-        android:columnWidth="110dp"
+        android:columnWidth="90dp"
         android:gravity="center"
-        android:horizontalSpacing="10dp"
-        android:numColumns="auto_fit"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp"
+        android:numColumns="2"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

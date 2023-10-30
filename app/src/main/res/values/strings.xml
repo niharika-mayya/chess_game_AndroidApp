@@ -40,6 +40,7 @@
     <string name="cardText6">Press the RESTART button to restart the game.</string>
     <string name="cardText7">Time indicator, to show remaining time for the move.</string>
     <string name="cardText8">Press EXIT button to quit the game.</string>
+    <string name="cardText9">Pause screen is shown here. Press PLAY button to resume the game.</string>
     <string name="b00">b00</string>
     <string name="b01">b01</string>
     <string name="b02">b02</string>
