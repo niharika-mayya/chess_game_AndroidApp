@@ -5,14 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".gallery">
-    <!-- grid_item.xml -->
-    <ImageView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-         android:scaleType="centerCrop"
-        android:layout_gravity="center"
-        android:src="@null" />
 
     <GridView
         android:id="@+id/gridview"

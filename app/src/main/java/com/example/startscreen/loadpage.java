@@ -3,6 +3,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -14,12 +15,16 @@ public class loadpage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loadpage);
+        DataBaseHandler db=new DataBaseHandler(loadpage.this);
+        SQLiteDatabase writableDB = db.getWritableDatabase();
         ImageView imageView = findViewById(R.id.image_view_1);
         RotateAnimation rotateAnimation = new RotateAnimation(
                 0, 360,
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );
+
+        
         rotateAnimation.setDuration(1000);
         rotateAnimation.setRepeatCount(Animation.INFINITE);
         imageView.startAnimation(rotateAnimation);

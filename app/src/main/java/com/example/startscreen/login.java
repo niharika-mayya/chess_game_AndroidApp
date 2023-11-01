@@ -90,6 +90,11 @@ public class login extends AppCompatActivity {
                             Intent i = new Intent(com.example.startscreen.login.this, home_page.class);
                             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(login.this);
                             startActivity(i, options.toBundle());
+
+
+
+
+
                         } else {
                             error.setText("Invalid Password!");
                         }

@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     Drawable btnbg;
     private long blackPausedTime = 0;
     String username="";
+    int gamestart=0;
     private boolean isWhiteTimerRunning = false;
     private boolean isBlackTimerRunning = false;
     private long whiteRemainingTime = 15000;
@@ -106,6 +107,29 @@ public class MainActivity extends AppCompatActivity {
         h1.setTag("black");h2.setTag("black");h3.setTag("null");h4.setTag("null");
         h5.setTag("null");h6.setTag("null");h7.setTag("white");h8.setTag("white");
 
+
+
+        if(gamestart==0)
+        {
+            Button[] allButtons = new Button[]{
+                    a1, a2, a3, a4, a5, a6, a7, a8,
+                    b1, b2, b3, b4, b5, b6, b7, b8,
+                    c1, c2, c3, c4, c5, c6, c7, c8,
+                    d1, d2, d3, d4, d5, d6, d7, d8,
+                    e1, e2, e3, e4, e5, e6, e7, e8,
+                    f1, f2, f3, f4, f5, f6, f7, f8,
+                    g1, g2, g3, g4, g5, g6, g7, g8,
+                    h1, h2, h3, h4, h5, h6, h7, h8
+            };
+            for (Button button : allButtons) {
+                if (button.getTag() != null && button.getTag().toString().contains("black")) {
+                    button.setClickable(false);
+                //    Toast.makeText(getApplicationContext(),"Yes",Toast.LENGTH_SHORT).show();
+                } else {
+                    button.setClickable(true);
+                }
+            }
+        }
         whitelabel = findViewById(R.id.white);
         blacklabel = findViewById(R.id.black);
 
@@ -166,14 +190,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isWhiteTurn) {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
+                 //   Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    whiteList.add(0,"Invalid Move!");
+
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(a1,a2);
                     tick2();
-                    blackList.add("a1-->a2");
+                    blackList.add(0,"a1-->a2");
                     blackAdapter.notifyDataSetChanged();
 
                 }
@@ -185,12 +210,12 @@ public class MainActivity extends AppCompatActivity {
                 if (isWhiteTurn) {
                     move(a2,a1);
                     tick1();
-                    whiteList.add("a2-->a1");
+                    whiteList.add(0,"a2-->a1");
                     whiteAdapter.notifyDataSetChanged();
                 } else {
                     move(a2,a3);
                     tick2();
-                     blackList.add("a2-->a3");
+                     blackList.add(0,"a2-->a3");
                     blackAdapter.notifyDataSetChanged();
 
                 }
@@ -201,12 +226,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(a3,a2);
-                    whiteList.add("a3-->a2");
+                    whiteList.add(0,"a3-->a2");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(a3,a4);
-                    blackList.add("a3-->a4");
+                    blackList.add(0,"a3-->a4");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -218,12 +243,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(a4,a3);
-                    whiteList.add("a4-->a3");
+                    whiteList.add(0,"a4-->a3");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(a4,a5);
-                    blackList.add("a4-->a5");
+                    blackList.add(0,"a4-->a5");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -235,12 +260,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(a5,a4);
-                    whiteList.add("a5-->a4");
+                    whiteList.add(0,"a5-->a4");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(a5,a6);
-                    blackList.add("a5-->a6");
+                    blackList.add(0,"a5-->a6");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -252,12 +277,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(a6,a5);
-                    whiteList.add("a6-->a5");
+                    whiteList.add(0,"a6-->a5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(a6,a7);
-                    blackList.add("a6-->a7");
+                    blackList.add(0,"a6-->a7");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -269,12 +294,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(a7,a6);
-                    whiteList.add("a7-->a6");
+                    whiteList.add(0,"a7-->a6");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(a7,a8);
-                    blackList.add("a7-->a8");
+                    blackList.add(0,"a7-->a8");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -285,12 +310,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(a8,a7);
-                    whiteList.add("a8-->a7");
+                    whiteList.add(0,"a8-->a7");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    blackList.add("Invalid Move!");
+                  //  Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    blackList.add(0,"Invalid Move!");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -300,14 +325,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isWhiteTurn) {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
+                 //   Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    whiteList.add(0,"Invalid Move!");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
 
                 } else {
                     move(b1,b2);
-                    blackList.add("b1-->b2");
+                    blackList.add(0,"b1-->b2");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -318,12 +343,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(b2,b1);
-                    whiteList.add("b2-->b1");
+                    whiteList.add(0,"b2-->b1");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(b2,b3);
-                    blackList.add("b2-->b3");
+                    blackList.add(0,"b2-->b3");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -335,12 +360,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(b3,b2);
-                    whiteList.add("b3-->b2");
+                    whiteList.add(0,"b3-->b2");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(b3,b4);
-                    blackList.add("b3-->b4");
+                    blackList.add(0,"b3-->b4");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -352,12 +377,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(b4,b3);
-                    whiteList.add("b4-->b3");
+                    whiteList.add(0,"b4-->b3");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(b4,b5);
-                    blackList.add("b4-->b5");
+                    blackList.add(0,"b4-->b5");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -369,12 +394,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(b5,b4);
-                    whiteList.add("b5-->b4");
+                    whiteList.add(0,"b5-->b4");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(b5,b6);
-                    blackList.add("b5-->b6");
+                    blackList.add(0,"b5-->b6");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -386,12 +411,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(b6,b5);
-                    whiteList.add("b6-->b5");
+                    whiteList.add(0,"b6-->b5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(b6,b7);
-                    blackList.add("b6-->b7");
+                    blackList.add(0,"b6-->b7");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -403,12 +428,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(b7,b6);
-                    whiteList.add("b7-->b6");
+                    whiteList.add(0,"b7-->b6");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(b7,b8);
-                    blackList.add("b7-->b8");
+                    blackList.add(0,"b7-->b8");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -420,12 +445,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(b8,b7);
-                    whiteList.add("b8-->b7");
+                    whiteList.add(0,"b8-->b7");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    blackList.add("Invalid Move!");
+               //     Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    blackList.add(0,"Invalid Move!");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -436,14 +461,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isWhiteTurn) {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
+                //    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    whiteList.add(0,"Invalid Move!");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
 
                 } else {
                     move(c1,c2);
-                    blackList.add("c1-->c2");
+                    blackList.add(0,"c1-->c2");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -454,12 +479,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(c2,c1);
-                    whiteList.add("c2-->c1");
+                    whiteList.add(0,"c2-->c1");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(c2,c3);
-                    blackList.add("c2-->c3");
+                    blackList.add(0,"c2-->c3");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -471,12 +496,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(c3,c2);
-                    whiteList.add("c3-->c2");
+                    whiteList.add(0,"c3-->c2");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(c3,c4);
-                    blackList.add("c3-->c4");
+                    blackList.add(0,"c3-->c4");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -488,12 +513,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(c4,c3);
-                    whiteList.add("c4-->c3");
+                    whiteList.add(0,"c4-->c3");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(c4,c5);
-                    blackList.add("c4-->c5");
+                    blackList.add(0,"c4-->c5");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -505,12 +530,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(c5,c4);
-                    whiteList.add("c5-->c4");
+                    whiteList.add(0,"c5-->c4");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(c5,c6);
-                    blackList.add("c5-->c6");
+                    blackList.add(0,"c5-->c6");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -522,12 +547,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(c6,c5);
-                    whiteList.add("c6-->c5");
+                    whiteList.add(0,"c6-->c5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(c6,c7);
-                    blackList.add("c6-->c7");
+                    blackList.add(0,"c6-->c7");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -539,12 +564,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(c7,c6);
-                    whiteList.add("c7-->c6");
+                    whiteList.add(0,"c7-->c6");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(c7,c8);
-                    blackList.add("c7-->c8");
+                    blackList.add(0,"c7-->c8");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -556,12 +581,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(c8,c7);
-                    whiteList.add("c8-->c7");
+                    whiteList.add(0,"c8-->c7");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    blackList.add("Invalid Move!");
+                   // Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    blackList.add(0,"Invalid Move!");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -572,14 +597,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isWhiteTurn) {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
+                 //   Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    whiteList.add(0,"Invalid Move!");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
 
                 } else {
                     move(d1,d2);
-                    blackList.add("d1-->d2");
+                    blackList.add(0,"d1-->d2");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -590,12 +615,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(d2,d1);
-                    whiteList.add("d2-->d1");
+                    whiteList.add(0,"d2-->d1");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(d2,d3);
-                    blackList.add("d2-->d3");
+                    blackList.add(0,"d2-->d3");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -607,12 +632,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(d3,d2);
-                    whiteList.add("d3-->d2");
+                    whiteList.add(0,"d3-->d2");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(d3,d4);
-                    blackList.add("d3-->d4");
+                    blackList.add(0,"d3-->d4");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -624,12 +649,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(d4,d3);
-                    whiteList.add("d4-->d3");
+                    whiteList.add(0,"d4-->d3");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(d4,d5);
-                    blackList.add("d4-->d5");
+                    blackList.add(0,"d4-->d5");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -641,12 +666,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(d5,d4);
-                    whiteList.add("d5-->d4");
+                    whiteList.add(0,"d5-->d4");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(d5,d6);
-                    blackList.add("d5-->d6");
+                    blackList.add(0,"d5-->d6");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -658,12 +683,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(d6,d5);
-                    whiteList.add("d6-->d5");
+                    whiteList.add(0,"d6-->d5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(d6,d7);
-                    blackList.add("d6-->d7");
+                    blackList.add(0,"d6-->d7");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -675,12 +700,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(d7,d6);
-                    whiteList.add("d7-->d6");
+                    whiteList.add(0,"d7-->d6");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(d7,d8);
-                    blackList.add("d7-->d8");
+                    blackList.add(0,"d7-->d8");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -692,12 +717,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(d8,d7);
-                    whiteList.add("d8-->d7");
+                    whiteList.add(0,"d8-->d7");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    blackList.add("Invalid Move!");
+                 //   Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    blackList.add(0,"Invalid Move!");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -708,14 +733,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isWhiteTurn) {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
+                  //  Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    whiteList.add(0,"Invalid Move!");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
 
                 } else {
                     move(e1,e2);
-                    blackList.add("e1-->e2");
+                    blackList.add(0,"e1-->e2");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -726,12 +751,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(e2,e1);
-                    whiteList.add("e2-->e1");
+                    whiteList.add(0,"e2-->e1");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(e2,e3);
-                    blackList.add("e2-->e3");
+                    blackList.add(0,"e2-->e3");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -743,12 +768,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(e3,e2);
-                    whiteList.add("e3-->e2");
+                    whiteList.add(0,"e3-->e2");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(e3,e4);
-                    blackList.add("e3-->e4");
+                    blackList.add(0,"e3-->e4");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -760,12 +785,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(e4,e3);
-                    whiteList.add("e4-->e3");
+                    whiteList.add(0,"e4-->e3");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(e4,e5);
-                    blackList.add("e4-->e5");
+                    blackList.add(0,"e4-->e5");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -777,12 +802,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(e5,e4);
-                    whiteList.add("e5-->e4");
+                    whiteList.add(0,"e5-->e4");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(e5,e6);
-                    blackList.add("e5-->e6");
+                    blackList.add(0,"e5-->e6");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -794,12 +819,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(e6,e5);
-                    whiteList.add("e6-->e5");
+                    whiteList.add(0,"e6-->e5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(e6,e7);
-                    blackList.add("e6-->e7");
+                    blackList.add(0,"e6-->e7");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -811,12 +836,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(e7,e6);
-                    whiteList.add("e7-->e6");
+                    whiteList.add(0,"e7-->e6");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(e7,e8);
-                    blackList.add("e7-->e8");
+                    blackList.add(0,"e7-->e8");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -828,12 +853,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(e8,e7);
-                    whiteList.add("e8-->e7");
+                    whiteList.add(0,"e8-->e7");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    blackList.add("Invalid Move!");
+                   // Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    blackList.add(0,"Invalid Move!");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -844,14 +869,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isWhiteTurn) {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
+                  //  Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    whiteList.add(0,"Invalid Move!");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
 
                 } else {
                     move(f1,f2);
-                    blackList.add("f1-->f2");
+                    blackList.add(0,"f1-->f2");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -862,12 +887,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(f2,f1);
-                    whiteList.add("f2-->f1");
+                    whiteList.add(0,"f2-->f1");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(f2,f3);
-                    blackList.add("f2-->f3");
+                    blackList.add(0,"f2-->f3");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -879,12 +904,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(f3,f2);
-                    whiteList.add("f3-->f2");
+                    whiteList.add(0,"f3-->f2");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(f3,f4);
-                    blackList.add("f3-->f4");
+                    blackList.add(0,"f3-->f4");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -895,12 +920,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(f4,f3);
-                    whiteList.add("f4-->f3");
+                    whiteList.add(0,"f4-->f3");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(f4,f5);
-                    blackList.add("f4-->f5");
+                    blackList.add(0,"f4-->f5");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -912,12 +937,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(f5,f4);
-                    whiteList.add("f5-->f4");
+                    whiteList.add(0,"f5-->f4");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(f5,f6);
-                    blackList.add("f5-->f6");
+                    blackList.add(0,"f5-->f6");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -929,12 +954,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(f6,f5);
-                    whiteList.add("f6-->f5");
+                    whiteList.add(0,"f6-->f5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(f6,f7);
-                    blackList.add("f6-->f7");
+                    blackList.add(0,"f6-->f7");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -946,12 +971,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(f7,f6);
-                    whiteList.add("f7-->f6");
+                    whiteList.add(0,"f7-->f6");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(f7,f8);
-                    blackList.add("f7-->f8");
+                    blackList.add(0,"f7-->f8");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -963,12 +988,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(f8,f7);
-                    whiteList.add("f8-->f7");
+                    whiteList.add(0,"f8-->f7");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    blackList.add("Invalid Move!");
+                    //Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    blackList.add(0,"Invalid Move!");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -979,14 +1004,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isWhiteTurn) {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
+                //    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    whiteList.add(0,"Invalid Move!");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
 
                 } else {
                     move(g1,g2);
-                    blackList.add("g1-->g2");
+                    blackList.add(0,"g1-->g2");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -997,12 +1022,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(g2,g1);
-                    whiteList.add("g2-->g1");
+                    whiteList.add(0,"g2-->g1");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(g2,g3);
-                    blackList.add("g2-->g3");
+                    blackList.add(0,"g2-->g3");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1014,12 +1039,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(g3,g2);
-                    whiteList.add("g3-->g2");
+                    whiteList.add(0,"g3-->g2");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(g3,g4);
-                    blackList.add("g3-->g4");
+                    blackList.add(0,"g3-->g4");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1031,12 +1056,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(g4,g3);
-                    whiteList.add("g4-->g3");
+                    whiteList.add(0,"g4-->g3");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(g4,g5);
-                    blackList.add("g4-->g5");
+                    blackList.add(0,"g4-->g5");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1048,12 +1073,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(g5,g4);
-                    whiteList.add("g5-->g4");
+                    whiteList.add(0,"g5-->g4");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(g5,g6);
-                    blackList.add("g5-->g6");
+                    blackList.add(0,"g5-->g6");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1065,12 +1090,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(g6,g5);
-                    whiteList.add("g6-->g5");
+                    whiteList.add(0,"g6-->g5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(g6,g7);
-                    blackList.add("g6-->g7");
+                    blackList.add(0,"g6-->g7");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1082,12 +1107,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn ){
                     move(g7,g6);
-                    whiteList.add("g7-->g6");
+                    whiteList.add(0,"g7-->g6");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(g7,g8);
-                    blackList.add("g7-->g8");
+                    blackList.add(0,"g7-->g8");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1099,12 +1124,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(g8,g7);
-                    whiteList.add("g8-->g7");
+                    whiteList.add(0,"g8-->g7");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    blackList.add("Invalid Move!");
+                   // Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    blackList.add(0,"Invalid Move!");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1115,14 +1140,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isWhiteTurn) {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
+                   // Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    whiteList.add(0,"Invalid Move!");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
 
                 } else {
                     move(h1,h2);
-                    blackList.add("h1-->h2");
+                    blackList.add(0,"h1-->h2");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
@@ -1133,12 +1158,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(h2,h1);
-                    whiteList.add("h2-->h1");
+                    whiteList.add(0,"h2-->h1");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(h2,h3);
-                    blackList.add("h2-->h3");
+                    blackList.add(0,"h2-->h3");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1150,12 +1175,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(h3,h2);
-                    whiteList.add("h3-->h2");
+                    whiteList.add(0,"h3-->h2");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(h3,h4);
-                    blackList.add("h3-->h4");
+                    blackList.add(0,"h3-->h4");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1167,12 +1192,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(h4,h3);
-                    whiteList.add("h4-->h3");
+                    whiteList.add(0,"h4-->h3");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(h4,h5);
-                    blackList.add("h4-->h5");
+                    blackList.add(0,"h4-->h5");
                     blackAdapter.notifyDataSetChanged();
                     tick2();
 
@@ -1184,13 +1209,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(h5,h4);
-                    whiteList.add("h5-->h4");
+                    whiteList.add(0,"h5-->h4");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(h5,h6);
-                    whiteList.add("h5-->h6");
-                    whiteAdapter.notifyDataSetChanged();
+                    blackList.add(0,"h5-->h6");
+                    blackAdapter.notifyDataSetChanged();
                     tick2();
 
                 }
@@ -1201,13 +1226,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(h6,h5);
-                    whiteList.add("h6-->h5");
+                    whiteList.add(0,"h6-->h5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(h6,h7);
-                    whiteList.add("h6-->h7");
-                    whiteAdapter.notifyDataSetChanged();
+                    blackList.add(0,"h6-->h7");
+                    blackAdapter.notifyDataSetChanged();
                     tick2();
 
                 }
@@ -1218,15 +1243,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(h7,h6);
-                    whiteList.add("h6-->h5");
+                    whiteList.add(0,"h6-->h5");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
                     move(h7,h8);
-                    whiteList.add("h7-->h8");
-                    whiteAdapter.notifyDataSetChanged();
+                    blackList.add(0,"h7-->h8");
+                    blackAdapter.notifyDataSetChanged();
                     tick2();
-
                 }
             }
         });
@@ -1235,18 +1259,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (isWhiteTurn) {
                     move(h8,h7);
-                    whiteList.add("h8-->h7");
+                    whiteList.add(0,"h8-->h7");
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
-                    Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
-                    whiteList.add("Invalid Move!");
-                    whiteAdapter.notifyDataSetChanged();
+                 //   Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
+                    blackList.add(0,"Invalid Move!");
+                    blackAdapter.notifyDataSetChanged();
                     tick2();
                 }
             }
         });
-
     }
     public void move(Button src,Button dest)
     {
@@ -1266,8 +1289,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(dest.getTag()=="kingwhite")
                 {
-                    Toast.makeText(this, "toast", Toast.LENGTH_SHORT).show();
-                    destinationButton.setBackground(btnbg);
+                   destinationButton.setBackground(btnbg);
                     Drawable imageView = clickedButton.getBackground();
                     destinationButton.setBackground(imageView);
                     Drawable[] layers = new Drawable[3];
@@ -1277,13 +1299,11 @@ public class MainActivity extends AppCompatActivity {
                     dest.setTag(src.getTag());
                     LayerDrawable layerDrawable1 = new LayerDrawable(layers);
                     src.setBackground(layerDrawable1);
-                    Toast.makeText(getApplicationContext(), "WHITE LOST!", Toast.LENGTH_SHORT).show();
                     matchesLost++;
-                    showMessage2();
+                    showMessage3();
                 }
                 else if(dest.getTag()=="kingblack")
                 {
-                    Toast.makeText(this, "toast", Toast.LENGTH_SHORT).show();
                     destinationButton.setBackground(btnbg);
                     Drawable imageView = clickedButton.getBackground();
                     destinationButton.setBackground(imageView);
@@ -1298,7 +1318,6 @@ public class MainActivity extends AppCompatActivity {
                     showMessage1();
                 }
                 else {
-                    Toast.makeText(this, "toast", Toast.LENGTH_SHORT).show();
                     destinationButton.setBackground(btnbg);
                     Drawable imageView = clickedButton.getBackground();
                     destinationButton.setBackground(imageView);
@@ -1310,8 +1329,6 @@ public class MainActivity extends AppCompatActivity {
                     LayerDrawable layerDrawable1 = new LayerDrawable(layers);
                     src.setBackground(layerDrawable1);
                 }
-
-            //    Log.d("matchesplayed:",matchesPlayed+"\t"+matchesWon+"\t"+matchesWon);
             }
             else if(layer2==null && clickedButtonDrawable != null)
             {
@@ -1336,7 +1353,6 @@ public class MainActivity extends AppCompatActivity {
             db.updateMatchesPlayedForUser(username,matchesPlayed);
             db.updateMatchesWonForUser(username,matchesWon);
             db.updateMatchesLostForUser(username,matchesLost);
-
     }
     public void placePawns()
     {
@@ -1480,7 +1496,7 @@ public class MainActivity extends AppCompatActivity {
                 h1, h2, h3, h4, h5, h6, h7, h8
         };
         for (Button button : allButtons) {
-                if (button.getTag() != null && button.getTag().toString().equals("black")) {
+                if (button.getTag() != null && button.getTag().toString().contains("black")) {
                     button.setClickable(false);
                 } else {
                     button.setClickable(true);
@@ -1500,7 +1516,7 @@ public class MainActivity extends AppCompatActivity {
                 h1, h2, h3, h4, h5, h6, h7, h8
         };
         for (Button button : allButtons) {
-            if (button.getTag() != null && button.getTag().toString().equals("white")) {
+            if (button.getTag() != null && button.getTag().toString().contains("white")) {
                 button.setClickable(false);
             }
             else
@@ -1571,10 +1587,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void showMessage2()
+    private void showMessage3()
     {
         Dialog msg=new Dialog(this);
-        msg.setContentView(R.layout.activity_message2);
+        msg.setContentView(R.layout.message3);
         msg.show();
         ImageView home=msg.findViewById(R.id.home);
         home.setOnClickListener(new View.OnClickListener()
@@ -1588,6 +1604,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void showRestartConfirmationDialog()
     {
         Dialog restartDialog = new Dialog(this);
@@ -1610,12 +1627,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         restartDialog.show();
-    }
-    private void updateTimerText(TextView timerTextView, long mainRemainingTime) {
-        long minutes = (mainRemainingTime / 1000) / 60;
-        long seconds = (mainRemainingTime / 1000) % 60;
-
-        String timeString = String.format("%02d:%02d", minutes, seconds);
-        timerTextView.setText(timeString);
     }
     }

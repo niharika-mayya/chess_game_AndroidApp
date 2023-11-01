@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">startscreen</string>
+    <string name="app_name">PairPlay Chess</string>
     <string name="rook_black1">rook_black1</string>
     <string name="knight_black1">knight_black1</string>
     <string name="bishop_black1">bishop_black1</string>

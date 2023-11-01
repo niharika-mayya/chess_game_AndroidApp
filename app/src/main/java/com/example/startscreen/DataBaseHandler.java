@@ -16,6 +16,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     String matchesPlayed="matchesPlayed";
     String matchesWon="matchesWon";
     String matchesLost="matchesLost";
+    String profilePicturePath="profilePicturePath";
 
 
     public DataBaseHandler(Context context) {
@@ -29,15 +30,29 @@ public class DataBaseHandler extends SQLiteOpenHelper {
                 password + " TEXT, " +
                 matchesPlayed + " INTEGER, " +
                 matchesWon + " INTEGER, " +
-                matchesLost + " INTEGER)";
+                matchesLost + " INTEGER, " +
+                profilePicturePath + " INTEGER)";
+
 
         sqLiteDatabase.execSQL(CREATE_USER_TABLE);
-     //   Log.d("CREATE_USER_TABLE:","SUCCESS");
+       Log.d("CREATE_USER_TABLE:","SUCCESS");
     }
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        if (newVersion > oldVersion) {
+            db.execSQL("DROP TABLE IF EXISTS " + TableName);
+            String CREATE_USER_TABLE = "CREATE TABLE " + TableName + " (" +
+                    username + " TEXT, " +
+                    password + " TEXT, " +
+                    matchesPlayed + " INTEGER, " +
+                    matchesWon + " INTEGER, " +
+                    matchesLost + " INTEGER, " +
+                    profilePicturePath + " INTEGER)";
+            db.execSQL(CREATE_USER_TABLE);
+            Log.d("CREATE_USER_TABLE:","SUCCESS1");
+        }
     }
+
     void addUser(UserInfo ui)
     {
         SQLiteDatabase db=this.getWritableDatabase();
@@ -47,6 +62,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         values.put(matchesPlayed,ui.getMatchesPlayed());
         values.put(matchesWon,ui.getMatchesWon());
         values.put(matchesLost,ui.getMatchesLost());
+        values.put(profilePicturePath,-1);
         db.insert(TableName,null,values);
         db.close();
         Log.d("USERINFODB:","record added");
@@ -186,7 +202,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         String[] whereArgs = { username };
 
         db.update(TableName, values, whereClause, whereArgs);
-
         db.close();
     }
 
@@ -207,5 +222,35 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         String whereClause = username + " = ?";
         String[] whereArgs = {OldUname};
         return db.update(TableName, values, whereClause, whereArgs);
+    }
+    public void del() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String deleteAllQuery = "DELETE FROM " + TableName + ";";
+        db.execSQL(deleteAllQuery);
+        db.close();
+    }
+    public void updateImage(String username, int i) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        String imageData = Integer.toString(i);
+        values.put("profilePicturePath", imageData);
+        String whereClause = "username = ?";
+        String[] whereArgs = { username };
+        db.update(TableName, values, whereClause, whereArgs);
+        Log.d("UpdateImage:","Image Vlaue Updared");
+        db.close();
+    }
+    public int getImage(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        int imageData = -1;
+        String[] projection = { "profilePicturePath" };
+        String selection = "username = ?";
+        String[] selectionArgs = { username };
+        Cursor cursor = db.query(TableName, projection, selection, selectionArgs, null, null, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            imageData = cursor.getInt(cursor.getColumnIndex("profilePicturePath"));
+            cursor.close();
+        }
+        return imageData;
     }
 }

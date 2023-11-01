@@ -3,7 +3,9 @@ package com.example.startscreen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -68,14 +70,21 @@ public class changeusername extends AppCompatActivity {
                 DataBaseHandler db=new DataBaseHandler(changeusername.this);
                 SQLiteDatabase writableDB = db.getWritableDatabase();
                 String uname=db.getUsername(currentusername.getText().toString());
+                SharedPreferences sharedPref = getSharedPreferences("username", Context.MODE_PRIVATE);
+                String username1="";
+                username1=sharedPref.getString("username","");
                 if(!isUsernameValid(currentusername.getText().toString())||!isUsernameValid(newusername.getText().toString()))
                 {
                     error.setText("Fields cannot be empty");
 
                 }
                 else {
+                    if(!username1.equals(currentusername.getText().toString()))
+                    {
+                        error.setText("Invalid Username!");
 
-                    if (uname.isEmpty()) {
+                    }
+                    else if (uname.isEmpty()) {
                         error.setText("Username not registered!");
                     } else {
                         db.updateUname(currentusername.getText().toString(), newusername.getText().toString());

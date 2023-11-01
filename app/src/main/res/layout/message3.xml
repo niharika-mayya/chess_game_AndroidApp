@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_message2">
+    android:background="@color/black"
+    tools:context=".activity_message1">
+
     <ImageView
-        android:layout_width="442dp"
-        android:layout_height="730dp"
+        android:layout_width="450dp"
+        android:layout_height="745dp"
         android:src="@drawable/chessbgexitrestart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:layout_width="259dp"
-        android:layout_height="104dp"
+        android:layout_width="249dp"
+        android:layout_height="132dp"
         android:layout_marginStart="81dp"
         android:layout_marginTop="312dp"
         android:layout_marginEnd="81dp"
@@ -24,40 +26,39 @@
         android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="230dp"
-        android:layout_height="32dp"
+        android:layout_width="228dp"
+        android:layout_height="101dp"
         android:layout_marginStart="83dp"
         android:layout_marginTop="323dp"
         android:layout_marginEnd="79dp"
         android:layout_marginBottom="371dp"
-        android:text="Better Luck Next Time!"
+        android:text="Congratulations BLACK!"
         android:textAlignment="center"
         android:textSize="23dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <ImageView
         android:id="@+id/home"
         android:layout_width="37.5dp"
         android:layout_height="37.5dp"
-        android:src="@drawable/home"
+
         android:clickable="true"
+        android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintHorizontal_bias="0.735"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.531" />
+        app:layout_constraintVertical_bias="0.546" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
