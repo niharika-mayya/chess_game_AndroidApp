@@ -68,8 +68,10 @@ public class changepassword extends AppCompatActivity {
             public void onClick(View view) {
                 DataBaseHandler db=new DataBaseHandler(changepassword.this);
                 SQLiteDatabase writableDB = db.getWritableDatabase();
+
                     SharedPreferences sharedPref = getSharedPreferences("username", Context.MODE_PRIVATE);
                     String username = sharedPref.getString("username", "");
+                String pswd=db.getPassword(username);
                 if(!isPasswordValid(currentpassword.getText().toString())||!isPasswordValid(newpassword.getText().toString()))
                 {
                     error.setText("Fields cannot be empty");
@@ -78,8 +80,13 @@ public class changepassword extends AppCompatActivity {
                 else {
 
                     if (username.isEmpty()) {
-                        error.setText("Username not registered or Incorrect Password!");
-                    } else {
+                        error.setText("Username not registered!");
+                    }
+                    else if(!pswd.equals(currentpassword.getText().toString()))
+                    {
+                        error.setText("Incorrect Password!");
+                    }
+                    else {
                         db.updatePswd(username, newpassword.getText().toString());
                         Toast.makeText(changepassword.this, "Password Updated Succesfully", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(com.example.startscreen.changepassword.this, login_register_page.class);

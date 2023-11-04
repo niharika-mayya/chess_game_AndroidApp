@@ -1,4 +1,3 @@
-
 package com.example.startscreen;
 import android.content.Context;
 import android.view.View;

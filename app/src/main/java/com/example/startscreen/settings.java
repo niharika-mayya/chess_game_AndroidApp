@@ -6,8 +6,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.example.startscreen.DataBaseHandler;
+
 public class settings extends AppCompatActivity {
     private static final int GALLERY_REQUEST_CODE = 1;
     ImageView profile;
@@ -27,9 +32,20 @@ public class settings extends AppCompatActivity {
         DataBaseHandler db=new DataBaseHandler(settings.this);
         SQLiteDatabase writableDB1 = db.getWritableDatabase();
         int profileid=db.getImage(username);
-        if(profileid>-1)
+        int[] imageIds = {
+
+                R.drawable.img1,R.drawable.img2, R.drawable.img3,R.drawable.img4,
+                R.drawable.img5,R.drawable.img6, R.drawable.img7,R.drawable.img8,
+                R.drawable.img9
+        };
+        if(profileid>=0)
         {
-            profile.setImageResource(ImageAdapter.mImageIds[profileid]);
+            profile.setImageResource(imageIds[profileid]);
+            Log.d("ImageAdapterView",profileid+"\t");
+        }
+        else
+        {
+            profile.setImageResource(R.drawable.userprofile);
         }
         changeuname.setOnClickListener(new View.OnClickListener()
         {
