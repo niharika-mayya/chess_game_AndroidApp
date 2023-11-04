@@ -109,27 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        if(gamestart==0)
-        {
-            Button[] allButtons = new Button[]{
-                    a1, a2, a3, a4, a5, a6, a7, a8,
-                    b1, b2, b3, b4, b5, b6, b7, b8,
-                    c1, c2, c3, c4, c5, c6, c7, c8,
-                    d1, d2, d3, d4, d5, d6, d7, d8,
-                    e1, e2, e3, e4, e5, e6, e7, e8,
-                    f1, f2, f3, f4, f5, f6, f7, f8,
-                    g1, g2, g3, g4, g5, g6, g7, g8,
-                    h1, h2, h3, h4, h5, h6, h7, h8
-            };
-            for (Button button : allButtons) {
-                if (button.getTag() != null && button.getTag().toString().contains("black")) {
-                    button.setClickable(false);
-                //    Toast.makeText(getApplicationContext(),"Yes",Toast.LENGTH_SHORT).show();
-                } else {
-                    button.setClickable(true);
-                }
-            }
-        }
+
         whitelabel = findViewById(R.id.white);
         blacklabel = findViewById(R.id.black);
 
@@ -1458,6 +1438,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 if(isWhiteTurn)
                 {
+                    btndisable1();
                     blacklabel.setBackgroundColor(Color.parseColor("#000000"));
                     whitelabel.setBackgroundColor(Color.parseColor("#5DF663"));
                     whitelabel.setTextColor(Color.parseColor("#000000"));
@@ -1466,6 +1447,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    btndisable2();
                     blacklabel.setTextColor(Color.parseColor("#000000"));
                     whitelabel.setBackgroundColor(Color.parseColor("#000000"));
                     whitelabel.setTextColor(Color.parseColor("#FFFFFF"));
