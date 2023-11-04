@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout3"
     android:layout_width="match_parent"
+    android:background="@color/black"
     android:layout_height="match_parent">
 
     <ImageView
@@ -91,13 +92,13 @@
         <ImageView
             android:id="@+id/restartImageView"
             android:layout_width="50dp"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:layout_gravity="start|top"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="-3dp"
             android:clickable="true"
             android:contentDescription="Restart"
-            android:src="@drawable/retry2" />
+            android:src="@drawable/retry" />
 
     </FrameLayout>
 
@@ -125,10 +126,10 @@
         android:src="@drawable/clock"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toEndOf="@+id/timer1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.258" />
+        app:layout_constraintVertical_bias="0.265" />
 
     <TextView
         android:id="@+id/timer2"
@@ -155,7 +156,7 @@
         app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.734" />
 
     <TextView
         android:id="@+id/textView2"
@@ -1720,7 +1721,7 @@
                 android:fontFamily="@font/font"
                 android:text="@string/cardText1"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
             <LinearLayout
                 android:layout_width="wrap_content"

@@ -23,7 +23,11 @@ public class loadpage extends AppCompatActivity {
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f
         );
-
+        /*An instance of RotateAnimation is created to rotate the imageview
+        360 degree with 50% relative width and 50% relative height
+        First Argument is:start angle
+        Second Argument is:end angle
+        Third Argument  and Fourth Argument is responsible for the rotation along the center of the imageview*/
         
         rotateAnimation.setDuration(1000);
         rotateAnimation.setRepeatCount(Animation.INFINITE);
@@ -36,6 +40,6 @@ public class loadpage extends AppCompatActivity {
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(loadpage.this);
                 startActivity(intent, options.toBundle());
             }
-        }, 5000);
+        }, 5000);//specifies that whatever code is inside the function is executed after 5 seconds of time period.
     }
 }

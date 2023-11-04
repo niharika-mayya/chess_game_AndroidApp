@@ -39,7 +39,9 @@
             android:exported="false" />
         <activity
             android:name=".tutorial"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".login_register_page"
             android:exported="false" />

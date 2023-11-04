@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout3"
     android:layout_width="match_parent"
-    android:background="@color/black"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
     <ImageView
         android:id="@+id/game_screen"
@@ -15,7 +15,7 @@
         android:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -59,6 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.218">
+
         <View
             android:id="@+id/rectangularBox"
             android:layout_width="150dp"
@@ -91,14 +92,15 @@
 
         <ImageView
             android:id="@+id/restartImageView"
-            android:layout_width="52dp"
-            android:layout_height="36dp"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
             android:layout_gravity="start|top"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="-3dp"
             android:clickable="true"
             android:contentDescription="Restart"
             android:src="@drawable/retry" />
+
 
     </FrameLayout>
 
@@ -123,8 +125,10 @@
         android:id="@+id/clock1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="521dp"
         android:src="@drawable/clock"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toEndOf="@+id/timer1"
@@ -150,11 +154,14 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="56dp"
+        android:layout_marginEnd="325dp"
         android:src="@drawable/clock"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintVertical_bias="0.736" />
 
     <TextView
         android:id="@+id/textView2"
@@ -1703,6 +1710,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timer2"
         app:layout_constraintVertical_bias="0.148">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -1716,40 +1724,40 @@
                 android:fontFamily="@font/font"
                 android:text="@string/cardText2"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="24sp" />
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30sp"
                 android:orientation="horizontal">
+
                 <ImageButton
                     android:id="@+id/imageButton1"
                     android:layout_width="40sp"
                     android:layout_height="40sp"
                     android:layout_marginRight="100sp"
+                    android:layout_weight="1"
                     android:background="@color/gray"
                     android:scaleType="centerCrop"
-                    android:layout_weight="1"
                     app:srcCompat="@drawable/back" />
 
                 <ImageButton
                     android:id="@+id/imageButton2"
                     android:layout_width="40sp"
                     android:layout_height="40sp"
+                    android:layout_weight="1"
                     android:background="@color/gray"
                     android:scaleType="centerCrop"
-                    android:layout_weight="1"
                     app:srcCompat="@drawable/forwd" />
 
 
             </LinearLayout>
 
 
-
         </LinearLayout>
-
 
 
     </androidx.cardview.widget.CardView>
