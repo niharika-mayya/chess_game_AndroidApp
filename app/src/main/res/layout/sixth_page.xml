@@ -153,15 +153,13 @@
         android:id="@+id/clock2"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="325dp"
         android:src="@drawable/clock"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/timer2"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintTop_toBottomOf="@+id/a1"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView2"
@@ -1718,7 +1716,7 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="107dp">
+                android:layout_height="98dp">
 
                 <ImageView
                     android:id="@+id/retry"
@@ -1744,40 +1742,39 @@
                     android:textStyle="bold" />
             </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="0sp"
-            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0sp"
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/imageButton1"
-                android:layout_width="40sp"
-                android:layout_height="40sp"
-                android:layout_marginRight="100sp"
-                android:layout_weight="1"
-                android:background="@color/gray"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/back" />
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_marginRight="100sp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/back" />
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="40sp"
-                android:layout_height="40sp"
-                android:layout_weight="1"
-                android:background="@color/gray"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/forwd" />
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/forwd" />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
 
-    </LinearLayout>
-
-
-
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

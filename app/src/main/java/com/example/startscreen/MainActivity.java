@@ -1540,9 +1540,7 @@ public class MainActivity extends AppCompatActivity {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(MainActivity.this, home_page.class);
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this);
-                startActivity(i, options.toBundle());
+               MainActivity.this.finish();
             }
         });
         noButton.setOnClickListener(new View.OnClickListener() {

@@ -19,15 +19,17 @@
         android:layout_width="513dp"
         android:layout_height="55dp"
         android:background="#B8F0A4"
-        android:gravity="center"
-        android:text="PAUSED"
         android:fontFamily="@font/lakkireddy"
+        android:gravity="center"
+        android:padding="15sp"
+        android:text="PAUSED"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/pausevw"
         android:layout_width="50dp"
@@ -35,7 +37,7 @@
         android:src="@drawable/resume"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintHorizontal_bias="0.783"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -34,7 +34,6 @@
         android:background="#81B8F0A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -45,17 +44,17 @@
         android:layout_height="68dp"
         android:backgroundTint="#55A239"
         android:fontFamily="@font/lakkireddy"
+        android:gravity="center"
         android:text="START"
+        android:layout_marginTop="10sp"
+        android:textColor="@color/black"
         android:textSize="20dp"
         app:cornerRadius="0dp"
-        android:textColor="@color/black"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.422" />
 
     <ImageView
 
