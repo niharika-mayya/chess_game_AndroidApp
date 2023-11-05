@@ -1735,7 +1735,7 @@
                     android:fontFamily="@font/font"
                     android:text="@string/cardText7"
                     android:textColor="@color/white"
-                    android:textSize="24dp"
+                    android:textSize="22dp"
                     android:textStyle="bold" />
             </RelativeLayout>
 

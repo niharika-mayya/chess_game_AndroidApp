@@ -1729,13 +1729,13 @@
 
             <TextView
                 android:layout_width="345dp"
-                android:layout_height="wrap_content"
+                android:layout_height="80sp"
                 android:layout_marginStart="10sp"
                 android:layout_marginRight="10sp"
                 android:fontFamily="@font/font"
                 android:text="@string/cardText5"
                 android:textColor="@color/white"
-                android:textSize="26dp"
+                android:textSize="22dp"
                 android:textStyle="bold" />
 
             <LinearLayout
