@@ -110,7 +110,7 @@ String uname="";
                     if (user_name.isEmpty()) {
                         UserInfo ui = new UserInfo(username.getText().toString(), password.getText().toString());
                         db.addUser(ui);
-                        Toast.makeText(register.this, "Registered Succesfully!", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(register.this, "Registered Succesfully!", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(register.this, login.class);
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(register.this);
                         startActivity(i, options.toBundle());

@@ -15,8 +15,8 @@ public class game_selection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_selection);
-      Button start=findViewById(R.id.start);
-       ImageView back=findViewById(R.id.back);
+        Button start=findViewById(R.id.start);
+        ImageView back=findViewById(R.id.back);
        start.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {

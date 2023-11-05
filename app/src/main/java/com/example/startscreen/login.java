@@ -77,7 +77,6 @@ public class login extends AppCompatActivity {
                 }
                 else {
 
-
                     if (uname.isEmpty()) {
                         error.setText("Username not registered!");
                     } else {
@@ -90,7 +89,6 @@ public class login extends AppCompatActivity {
                             Intent i = new Intent(com.example.startscreen.login.this, home_page.class);
                             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(login.this);
                             startActivity(i, options.toBundle());
-
 
 
 

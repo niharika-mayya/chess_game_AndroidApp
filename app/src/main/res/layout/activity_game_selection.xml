@@ -34,28 +34,40 @@
         android:background="#81B8F0A4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/start"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:backgroundTint="#EE8BC34A"
-        android:text="START"
+        android:layout_width="211dp"
+        android:layout_height="68dp"
+        android:backgroundTint="#55A239"
         android:fontFamily="@font/lakkireddy"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="26dp"
-        android:textStyle="bold"
+        android:text="START"
+        android:textSize="20dp"
         app:cornerRadius="0dp"
+        android:textColor="@color/black"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.434" />
+        app:layout_constraintVertical_bias="0.425" />
+
+    <ImageView
+
+        android:layout_width="43dp"
+        android:layout_height="49dp"
+        android:src="@drawable/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.701"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426" />
 
     <ImageView
         android:id="@+id/back"

@@ -88,7 +88,7 @@ public class changepassword extends AppCompatActivity {
                     }
                     else {
                         db.updatePswd(username, newpassword.getText().toString());
-                        Toast.makeText(changepassword.this, "Password Updated Succesfully", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(changepassword.this, "Password Updated Succesfully", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(com.example.startscreen.changepassword.this, login_register_page.class);
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(changepassword.this);
                         startActivity(i, options.toBundle());

@@ -20,8 +20,10 @@ public class viewstats extends AppCompatActivity {
 
         SharedPreferences sharedPref = getSharedPreferences("username", Context.MODE_PRIVATE);
         String username=sharedPref.getString("username","");
+
         db=new DataBaseHandler(viewstats.this);
         readableDB = db.getWritableDatabase();
+
         TextView matches_played=findViewById(R.id.matchesplayed);
         TextView matches_won=findViewById(R.id.matcheswon);
         TextView matches_lost=findViewById(R.id.matcheslost);
@@ -29,7 +31,6 @@ public class viewstats extends AppCompatActivity {
         int matchesPlayed=db.getMatchesPlayedForUser(username);
         int matchesWon=db.getMatchesWonForUser(username);
         int matchesLost=db.getMatchesLostForUser(username);
-
 
 
         matches_played.setText(String.valueOf(matchesPlayed));

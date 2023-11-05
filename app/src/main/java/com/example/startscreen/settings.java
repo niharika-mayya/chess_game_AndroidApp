@@ -17,7 +17,8 @@ public class settings extends AppCompatActivity {
     private static final int GALLERY_REQUEST_CODE = 1;
     ImageView profile;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         profile = findViewById(R.id.profile);

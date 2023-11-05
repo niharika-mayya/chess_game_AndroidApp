@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         matchesLost=db.getMatchesLostForUser(username);
 
         matchesPlayed++;
+
         a1 = findViewById(R.id.a1);a2 = findViewById(R.id.a2);a3 = findViewById(R.id.a3);a4 = findViewById(R.id.a4);
         a5 = findViewById(R.id.a5);a6 = findViewById(R.id.a6);a7 = findViewById(R.id.a7);a8 = findViewById(R.id.a8);
         b1 = findViewById(R.id.b1);b2 = findViewById(R.id.b2);b3 = findViewById(R.id.b3);b4 = findViewById(R.id.b4);
@@ -106,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
         g5.setTag("null");g6.setTag("null");g7.setTag("white");g8.setTag("white");
         h1.setTag("black");h2.setTag("black");h3.setTag("null");h4.setTag("null");
         h5.setTag("null");h6.setTag("null");h7.setTag("white");h8.setTag("white");
-
 
 
 
@@ -172,7 +172,6 @@ public class MainActivity extends AppCompatActivity {
                 if (isWhiteTurn) {
                  //   Toast.makeText(MainActivity.this,"End of the board!",Toast.LENGTH_SHORT).show();
                     whiteList.add(0,"Invalid Move!");
-
                     whiteAdapter.notifyDataSetChanged();
                     tick1();
                 } else {
@@ -1269,7 +1268,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(dest.getTag()=="kingwhite")
                 {
-                   destinationButton.setBackground(btnbg);
+                    destinationButton.setBackground(btnbg);
                     Drawable imageView = clickedButton.getBackground();
                     destinationButton.setBackground(imageView);
                     Drawable[] layers = new Drawable[3];
@@ -1541,7 +1540,9 @@ public class MainActivity extends AppCompatActivity {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent i=new Intent(MainActivity.this, home_page.class);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this);
+                startActivity(i, options.toBundle());
             }
         });
         noButton.setOnClickListener(new View.OnClickListener() {

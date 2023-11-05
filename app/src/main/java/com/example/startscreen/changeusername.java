@@ -69,6 +69,7 @@ public class changeusername extends AppCompatActivity {
             public void onClick(View view) {
                 DataBaseHandler db=new DataBaseHandler(changeusername.this);
                 SQLiteDatabase writableDB = db.getWritableDatabase();
+
                 String uname=db.getUsername(currentusername.getText().toString());
                 SharedPreferences sharedPref = getSharedPreferences("username", Context.MODE_PRIVATE);
                 String username1="";
@@ -88,7 +89,7 @@ public class changeusername extends AppCompatActivity {
                         error.setText("Username not registered!");
                     } else {
                         db.updateUname(currentusername.getText().toString(), newusername.getText().toString());
-                        Toast.makeText(changeusername.this, "Username Updated Succesfully", Toast.LENGTH_SHORT).show();
+                   //     Toast.makeText(changeusername.this, "Username Updated Succesfully", Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(com.example.startscreen.changeusername.this, login_register_page.class);
                         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(changeusername.this);
                         startActivity(i, options.toBundle());

@@ -32,8 +32,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
                 matchesWon + " INTEGER, " +
                 matchesLost + " INTEGER, " +
                 profilePicturePath + " INTEGER)";
-
-
         sqLiteDatabase.execSQL(CREATE_USER_TABLE);
        Log.d("CREATE_USER_TABLE:","SUCCESS");
     }
@@ -151,7 +149,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     public int getMatchesLostForUser(String username) {
         SQLiteDatabase db = this.getReadableDatabase();
         int matchesLost = 0;
-
         String[] columns = { "matchesLost" };
         String selection = "username = ?";
         String[] selectionArgs = { username };
@@ -237,7 +234,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         String whereClause = "username = ?";
         String[] whereArgs = { username };
         db.update(TableName, values, whereClause, whereArgs);
-        Log.d("UpdateImage:","Image Vlaue Updared");
+       // Log.d("UpdateImage:","Image Vlaue Updared");
         db.close();
     }
     public int getImage(String username) {

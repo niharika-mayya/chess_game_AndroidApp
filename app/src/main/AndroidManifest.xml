@@ -12,48 +12,62 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Startscreen"
         tools:targetApi="31">
+
         <activity
             android:name=".viewstats"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".changepassword"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".changeusername"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".ImageAdapter"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".gallery"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".settings"
-            android:exported="true" >
+            android:exported="true"
+            android:taskAffinity="">
         </activity>
         <activity
             android:name=".register"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".login"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".tutorial"
-            android:exported="true" >
+            android:exported="true"
+            android:taskAffinity="">
 
         </activity>
         <activity
             android:name=".login_register_page"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".home_page"
-            android:exported="true" />
+            android:exported="true"
+            android:taskAffinity=""/>
         <activity
             android:name=".game_selection"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity=""/>
         <activity
             android:name=".loadpage"
-            android:exported="true">
+            android:exported="true"
+            android:taskAffinity="">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

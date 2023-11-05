@@ -34,7 +34,7 @@ public class home_page extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(home_page.this,com.example.startscreen.tutorial.class);
-           ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(home_page.this);
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(home_page.this);
             startActivity(i, options.toBundle());
               //  startActivity(i);
             }
@@ -49,7 +49,7 @@ public class home_page extends AppCompatActivity {
                 yesButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        home_page.this.finish();
+                        finishAffinity();
                         System.exit(0);
                     }
                 });

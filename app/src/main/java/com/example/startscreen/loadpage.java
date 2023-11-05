@@ -2,7 +2,9 @@ package com.example.startscreen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,9 +12,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
-public class loadpage extends AppCompatActivity {
+public class loadpage extends AppCompatActivity
+{
+    private static final int REQUEST_CODE = 1;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loadpage);
         DataBaseHandler db=new DataBaseHandler(loadpage.this);
@@ -41,5 +46,6 @@ public class loadpage extends AppCompatActivity {
                 startActivity(intent, options.toBundle());
             }
         }, 5000);//specifies that whatever code is inside the function is executed after 5 seconds of time period.
+
     }
 }
