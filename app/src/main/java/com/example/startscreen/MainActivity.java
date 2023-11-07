@@ -1276,6 +1276,7 @@ public class MainActivity extends AppCompatActivity {
                     layers[1] = btnbg;
                     layers[2] = null;
                     dest.setTag(src.getTag());
+                    src.setTag(null);
                     LayerDrawable layerDrawable1 = new LayerDrawable(layers);
                     src.setBackground(layerDrawable1);
                     matchesLost++;
@@ -1291,6 +1292,7 @@ public class MainActivity extends AppCompatActivity {
                     layers[1] = btnbg;
                     layers[2] = null;
                     dest.setTag(src.getTag());
+                    src.setTag(null);
                     LayerDrawable layerDrawable1 = new LayerDrawable(layers);
                     src.setBackground(layerDrawable1);
                     matchesWon++;
@@ -1305,6 +1307,7 @@ public class MainActivity extends AppCompatActivity {
                     layers[1] = btnbg;
                     layers[2] = null;
                     dest.setTag(src.getTag());
+                    src.setTag(null);
                     LayerDrawable layerDrawable1 = new LayerDrawable(layers);
                     src.setBackground(layerDrawable1);
                 }
@@ -1314,6 +1317,7 @@ public class MainActivity extends AppCompatActivity {
                     if (clickedButtonDrawable instanceof Drawable)
                     {
                         dest.setTag(src.getTag());
+
                         src.setTag(null);
                         Drawable imageView = clickedButtonDrawable;
                         destinationButton.setBackground(imageView);
