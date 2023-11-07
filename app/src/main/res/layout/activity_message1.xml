@@ -18,7 +18,7 @@
 
     <View
         android:layout_width="249dp"
-        android:layout_height="132dp"
+        android:layout_height="150dp"
         android:layout_marginStart="81dp"
         android:layout_marginTop="312dp"
         android:layout_marginEnd="81dp"
@@ -36,7 +36,7 @@
         android:layout_marginTop="323dp"
         android:layout_marginEnd="79dp"
         android:layout_marginBottom="371dp"
-        android:text="Congratulations WHITE!"
+        android:text="Congratulations WHITE! you won"
         android:fontFamily="@font/lakkireddy"
         android:textAlignment="center"
         android:textSize="23dp"
@@ -57,9 +57,8 @@
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintVertical_bias="0.567" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

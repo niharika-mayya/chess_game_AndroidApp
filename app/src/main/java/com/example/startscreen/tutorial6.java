@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 
-public class seventhFragment extends Fragment {
+public class tutorial6 extends Fragment {
 
     protected View view;
     protected ImageButton move_previous, move_next;
@@ -21,13 +21,13 @@ public class seventhFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.seventh_page, container, false);
+        view = inflater.inflate(R.layout.sixth_page, container, false);
         move_previous = view.findViewById(R.id.imageButton1);
         move_next = view.findViewById(R.id.imageButton2);
         move_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sixthFragment fragment= new sixthFragment();
+                tutorial5 fragment= new tutorial5();
                 FragmentManager fm =getActivity().getSupportFragmentManager();
                 FragmentTransaction ft= fm.beginTransaction();
                 ft.replace(R.id.frameLayout, fragment);
@@ -37,7 +37,7 @@ public class seventhFragment extends Fragment {
         move_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                eightFragment fragment = new eightFragment();
+                tutorial7 fragment = new tutorial7();
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frameLayout, fragment);

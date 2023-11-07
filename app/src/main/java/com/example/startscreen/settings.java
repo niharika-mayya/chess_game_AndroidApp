@@ -92,9 +92,8 @@ public class settings extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent i=new Intent(settings.this, home_page.class);
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(settings.this);
-                startActivity(i, options.toBundle());
+                settings.this.finish();
+
             }
         });
         profile.setOnClickListener(new View.OnClickListener()
