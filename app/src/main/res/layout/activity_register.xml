@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
+        app:layout_constraintVertical_bias="0.483" />
 
     <ImageView
         android:layout_width="190dp"
@@ -122,10 +122,9 @@
         android:src="@drawable/line"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintVertical_bias="0.629" />
 
     <ImageView
         android:layout_width="167dp"
@@ -164,6 +163,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.319" />
 
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -171,11 +171,9 @@
         android:src="@drawable/line"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
-
+        app:layout_constraintVertical_bias="0.349" />
 
     <TextView
         android:id="@+id/errormsg"
