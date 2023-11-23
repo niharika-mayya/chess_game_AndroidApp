@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         h1 = findViewById(R.id.h1);h2 = findViewById(R.id.h2);h3 = findViewById(R.id.h3);h4 = findViewById(R.id.h4);
         h5 = findViewById(R.id.h5);h6 = findViewById(R.id.h6);h7 = findViewById(R.id.h7);h8 = findViewById(R.id.h8);
 
-        placePawns();
+        placePawns();//bind
 
         a1.setTag("black");a2.setTag("black");a3.setTag("null");a4.setTag("null");
         a5.setTag("null");a6.setTag("null");a7.setTag("white");a8.setTag("white");
@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         blackTimer = createTimer(blackRemainingTime, blackTimerTextView);
 
         whiteTimer.start();
+        //blackTimer.start();
 
         blackList=new ArrayList();
         whiteList=new ArrayList();
@@ -1276,7 +1277,7 @@ public class MainActivity extends AppCompatActivity {
                     layers[1] = btnbg;
                     layers[2] = null;
                     dest.setTag(src.getTag());
-                    src.setTag(null);
+                    src.setTag("null");
                     LayerDrawable layerDrawable1 = new LayerDrawable(layers);
                     src.setBackground(layerDrawable1);
                     matchesLost++;
@@ -1292,7 +1293,7 @@ public class MainActivity extends AppCompatActivity {
                     layers[1] = btnbg;
                     layers[2] = null;
                     dest.setTag(src.getTag());
-                    src.setTag(null);
+                    src.setTag("null");
                     LayerDrawable layerDrawable1 = new LayerDrawable(layers);
                     src.setBackground(layerDrawable1);
                     matchesWon++;
@@ -1307,7 +1308,7 @@ public class MainActivity extends AppCompatActivity {
                     layers[1] = btnbg;
                     layers[2] = null;
                     dest.setTag(src.getTag());
-                    src.setTag(null);
+                    src.setTag("null");
                     LayerDrawable layerDrawable1 = new LayerDrawable(layers);
                     src.setBackground(layerDrawable1);
                 }
@@ -1317,8 +1318,7 @@ public class MainActivity extends AppCompatActivity {
                     if (clickedButtonDrawable instanceof Drawable)
                     {
                         dest.setTag(src.getTag());
-
-                        src.setTag(null);
+                        src.setTag("null");
                         Drawable imageView = clickedButtonDrawable;
                         destinationButton.setBackground(imageView);
                         Drawable[] layers = new Drawable[3];
@@ -1480,6 +1480,14 @@ public class MainActivity extends AppCompatActivity {
                 g1, g2, g3, g4, g5, g6, g7, g8,
                 h1, h2, h3, h4, h5, h6, h7, h8
         };
+        for(Button button :allButtons)
+        {
+            if (button.getTag() != null && button.getTag().toString().equals("null")) {
+                button.setClickable(false);
+            } else {
+                button.setClickable(true);
+            }
+        }
         for (Button button : allButtons) {
                 if (button.getTag() != null && button.getTag().toString().contains("black")) {
                     button.setClickable(false);
@@ -1500,6 +1508,14 @@ public class MainActivity extends AppCompatActivity {
                 g1, g2, g3, g4, g5, g6, g7, g8,
                 h1, h2, h3, h4, h5, h6, h7, h8
         };
+        for(Button button :allButtons)
+        {
+            if (button.getTag() != null && button.getTag().toString().equals("null")) {
+                button.setClickable(false);
+            } else {
+                button.setClickable(true);
+            }
+        }
         for (Button button : allButtons) {
             if (button.getTag() != null && button.getTag().toString().contains("white")) {
                 button.setClickable(false);

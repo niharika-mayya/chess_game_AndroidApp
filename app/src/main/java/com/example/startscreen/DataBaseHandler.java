@@ -12,7 +12,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     String TableName="user";
     String username="username";
     String password="password";
-
     String matchesPlayed="matchesPlayed";
     String matchesWon="matchesWon";
     String matchesLost="matchesLost";

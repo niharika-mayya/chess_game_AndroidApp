@@ -125,15 +125,14 @@
         android:id="@+id/clock1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginBottom="521dp"
+
         android:src="@drawable/clock"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toEndOf="@+id/timer1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.265" />
 
     <TextView
         android:id="@+id/timer2"

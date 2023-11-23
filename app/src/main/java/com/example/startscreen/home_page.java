@@ -32,11 +32,9 @@ public class home_page extends AppCompatActivity {
         });
         tutorial.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent i=new Intent(home_page.this,com.example.startscreen.tutorial.class);
+            public void onClick(View view) {Intent i=new Intent(home_page.this,com.example.startscreen.tutorial.class);
             ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(home_page.this);
             startActivity(i, options.toBundle());
-              //  startActivity(i);
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {
